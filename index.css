@@ -31,8 +31,8 @@ h1, h3, p{
 /* Set the apperance of the class, chart */
 .chart{
     background-color: white;
-    width:330px;
-    border-width: 30px;
+    width:370px;
+    border-width: 10px;
     border-style: solid;
     border-radius: 5px;
     border-color: black;
