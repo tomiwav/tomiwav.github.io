@@ -1,5 +1,5 @@
 Country ,Crypto,Status
-United States,1,Development
+United States of America,1,Development
 India,1,Pilot 
 Vietnam,1,Research
 China,1,Pilot 
@@ -153,6 +153,6 @@ Macao,1,Development
 Cabo Verde,0,N/A
 New Caledonia,0,N/A
 Brunei Darussalam,0,N/A
-"Virgin Islands , U.S.",0,N/A
+Virgin Islands U.S.,0,N/A
 Cayman Islands,0,N/A
 Bermuda,0,Inactive
