@@ -1,11 +1,11 @@
-Country / Region,Status
+Country,Status
 Turkey,Proof of concept
 South Korea,Proof of concept
-Singapore,Pilot
 Singapore,Research
-Russian Federation,Proof of concept
+Russian,Proof of concept
 India,Pilot
-"Hong Kong, Thailand, China and UAE",Research
+China,Research
+Thailand,Research
 Bahamas,Launched
 Sri Lanka,Research
 Australia,Research
@@ -14,44 +14,29 @@ Nepal,Research
 Namibia,Research
 Laos,Research
 Kazakhstan,Proof of concept
-Israel & Norway & Sweden,Research
 Iran,Proof of concept
 France,Pilot
-Euro Area,Research
-Euro Area,Research
 Eswatini,Research
 China,Pilot
 United States of America,Research
 Nigeria,Pilot
 Jamaica,Launched
-India,Research
 Hong Kong,Research
 Brazil,Proof of concept
 Zimbabwe,Research
 Thailand,Proof of concept
 Indonesia,Research
 Mauritius,Research
-India,Research
 Dominican Republic,Research
 Cote d'Ivoire,Research
-Chile,Research
 Taiwan,Proof of concept
-South Korea,Proof of concept
-"Israel, Hong Kong",Research
-Israel,Proof of concept
 Indonesia,Research
 Mauritius,Research
-India,Research
 Dominican Republic,Research
 Cote d'Ivoire,Research
 Chile,Research
-Taiwan,Proof of concept
-South Korea,Proof of concept
-"Israel, Hong Kong",Research
 Israel,Proof of concept
-France,Pilot
 Fiji,Research
-Eastern Caribbean Economic and Currency Union (OECS/ECCU),Pilot
 Bangladesh,Research
 Azerbaijan,Research
 Hungary,Proof of concept
@@ -61,7 +46,6 @@ South Africa,Research
 Mexico,Research
 Curacao,Research
 Trinidad and Tobago,Research
-Singapore,Cancelled
 Rwanda,Research
 Malaysia,Research
 Japan,Proof of concept
@@ -70,10 +54,8 @@ Zambia,Research
 Yemen,Research
 Uganda,Research
 Sweden,Proof of concept
-Saudi Arabia,Research
 Qatar,Research
 Philippines,Cancelled
-Philippines,Research
 Oman,Research
 New Zealand,Proof of concept
 Kenya,Research
@@ -94,35 +76,22 @@ Vanuatu,Research
 United Arab Emirates,Research
 Tonga,Research
 Solomon Islands,Research
-France & Tunisia,Pilot
-France & Singapore,Pilot
+Tunisia,Pilot
 Palestine,Research
-Hong Kong,Research
-France & Switzerland,Research
-Austria,Research
+Switzerland,Research
 Austria,Research
 South Africa,Research
 Poland,Research
 Pakistan,Research
 Macau,Research
 Georgia,Research
-Haiti,Research
-United States of America,Research
 Morocco,Research
 Czech Republic,Research
 Switzerland,Research
-France,Pilot
 Lebanon,Research
-Euro Area,Research
-Australia,Research
-Hong Kong,Proof of concept
-United States of America,Research
-Canada,Pilot
 Thailand,Proof of concept
 Bahrain,Research
 Switzerland,Research
-United Arab Emirates,Pilot
-Tunisia,Research
 Saudi Arabia,Pilot
 Kuwait,Research
 Thailand,Proof of concept
@@ -130,13 +99,9 @@ Haiti,Cancelled
 Canada,Research
 Egypt,Research
 United Kingdom,Research
-Iran,Research
 Ukraine,Proof of concept
 Iceland,Research
-Denmark,Cancelled
 Uruguay,Pilot
 Ecuador,Cancelled
 Japan,Research
-Euro Area,Research
-United Kingdom,Research
 Finland,Cancelled
