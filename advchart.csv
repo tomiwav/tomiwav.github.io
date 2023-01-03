@@ -1,4 +1,4 @@
-Country , GDP ,Percentage,Number
+Country,GDP,Percentage,Number
 United States,70249,0.1338,44816878
 India,2257,0.071,97483000
 Vietnam,3757,0.1873,18669973
@@ -50,7 +50,7 @@ Egypt,3699,0.0226,2372936
 Italy,35658,0.0226,1334163
 Zambia,1137,0.0224,424937
 Cambodia,1625,0.0222,382091
-Democratic Rep. of Congo,577,0.0215,2038909
+Congo,577,0.0215,2038909
 Portugal,24568,0.0214,219675
 Georgia,5024,0.0213,79722
 Bolivia,3345,0.021,250449
@@ -153,6 +153,6 @@ Macao,43874,0.0101,3921
 Cabo Verde,3293,0.01,5395
 New Caledonia,37160,0.0099,2983
 Brunei Darussalam,31449,0.0099,5169
-"Virgin Islands , U.S.",39552,0.0099,1032
+Virgin Islands,39552,0.0099,1032
 Cayman Islands,86569,0.0098,1075
 Bermuda,114090,0.0097,681
