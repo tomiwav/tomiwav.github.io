@@ -7,14 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title for the page -->
-    <title>Document</title>
 
-    <!-- Link to my style sheet -->
-    <link rel="stylesheet" href="index.css">
-
-    <!--The next three lines allow the Vega embed-->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
@@ -22,32 +15,342 @@
 
 
 
+<link rel="stylesheet" href="index2.css">
+
+
 <body>
-    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
-    <div class="myWeek1">
-        <h1>Tomiwa's Data Science Portfolio</h1>
+<!--header-->
+    <section id="header">
+        <article>
+          <h2> <span style="color: black">Tomiwa Vaughan</span>: 2027165</h2>
+        </article>
+      </section>
+<!--navigation section-->
+    <nav>
+        <a class="active" href="index.html">Portfolio</a>
+        <a href="project.html">Project</a>
+        <a href="https://github.com/tomiwav/tomiwav.github.io">Github</a>
+    </nav>
+
+
+
+<!-- the start of the actual content, we create a new section called Week which each week will be contained within.-->
+    <section id="Week">
+      
+
+        <article>
+            <h2>Week 1 - Embedding Charts</h2>
+            
+            
+        </article>
+    
+            <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+            <container class="container">
+
+                <div id="text">
+                    <h3>Ozone Layer</h3>
+                
+              
+                <div class="chart" id="Chart1"></div>
+                </div>
+              
+                <div id="text2">
+                    <h3>CO2 Emissions in major countries</h3>
+                <div class="chart" id="Chart2"> </div>
+                </div>
+            </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 2 Starts Here -->
+        <article>
+            <h2>Week 2 - IMF Visualisation</h2>
+            
+        </article>
+    
+            <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+            <container class="container">
+
+                <div id="text">
+                    <h3>IMF Lending Oustanding Chart</h3>
+                    <p>This chart shows IMF Lending figures yearly<br>From this illustration it seems that 2019 has been the riskiest year to invest<br></p>
+              
+                <div class="chart" id="IMFChart1"></div>
+                </div>
+              
+                <div id="text2">
+                    <h3>As a % of GDP Chart</h3>
+                    <p>This chart shows the same lending figures as a percentage of global GDP in each year. <br> This highlights that 1985, was infact the riskies year to invest  </p>
+                <div class="chart" id="IMFChart2"> </div>
+                </div>
+            </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 3 -->
+        <article>
+            <h2>Week 3 - Vega Visualisation</h2>
+            <p> These 2 charts show the UK Bond Market using 2 Visualisations. In the second chart I used a Line Chart rather than a Bar Chart as the visualisation would be much less visually overwhelming for the reader.</p>
+            
+        </article>
+    
+            
+            <container class="container">
+
+                <div id="text">
+                    <h3>UK Bond Market Yield</h3>
+                    
+                
+            
+                    <div class="chart" id="BondChart"></div>
+                </div>
+    
+                <div id="text2">
+                    <h3>UK Bond Market Yield</h3>
+                    
+    
+                    <div class="chart" id="BondChart2"></div>
+                
+                </div>
+            </container>
+    </section>
+
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 4 -->
+        <article>
+            <h2>Week 4 - Scraping</h2>
+            <p> This <a href="https://colab.research.google.com/drive/1HDm5qboA4wcipj9T_OIHsnvhmRXDrIXY#scrollTo=TAEeYhngD8TG" target="_blank">Google Colab</a> notebook shows how I scraped the data from a table on 
+                the premier league website and tidied it to get the top 10 of all time.
+                The data was scraped from <a href="https://www.premierleague.com/stats" target="_blank">here</a></p>
+            
+        </article>
+    
+            <container class="container">
+
+                <div id="text">
+                    <h3>All-Time Leaders of hitting the woodwork</h3>
+                    
+                
+            
+                    <div class="chart" id="WoodChart"></div>
+                </div>
+            </container>
+    </section>
+
+
+
+      <section id="Week">
+        <article>
+          <h2>Week 5 - Loops</h2>
+          <p> My <a href="https://colab.research.google.com/drive/1n3M3aARha_LRMAU3oWBMDFukow34r4bf" target="_blank">Google Colab</a> shows the code used in order to create a dashboard of visualisations</p>
+        </article>
+          <container class="container">
+                
+                <div class="chart" id="ONS1"></div>
+                <div class="chart" id="ONS2"></div>
+                <div class="chart" id="ONS3"></div>
+    
+                
+                <div class="chart" id="ONS4"></div>
+                <div class="chart" id="ONS5"></div>
+                <div class="chart" id="ONS6"></div>
+    
+                
+                <div class="chart" id="ONS7"></div>
+                <div class="chart" id="ONS8"></div>
+                <div class="chart" id="ONS9"></div>
+    
+            </container>
+        </section>
+
+
+
+
+    <section id="Week">
+      
+        <!--Week 7-->
+        <article>
+            <h2>Week 7 - Maps</h2>
+            <p>This week we worked on maps. We first needed to create a working map with a tooltip showing the name of each highlighted region.
+            My <a href="https://colab.research.google.com/drive/103IDVoBNHi6DBzga2Xix5thIhw5Oz8sL?usp=sharing" target="_blank">Google Colab</a> file shows how i used a simple scraper
+            to scrape a table of Italian region names (to match with the geojson file) and information on the number of sub-regional 'comune' are in each region.</p>
+                
+        </article>
         
-        <h3>Ozone Concentration</h3>
-        <p>The first chart looks at ozone concentration in the UK and Bristol.</p>
-        <div class="chart" id="Chart1"></div>
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+            <div id="text">
+                <h3>Base map of the world.</h3>
 
-        <h3>CO2 Emissions</h3>
-        <p>My second chart looks at the CO2 emissions in various countries</p>
-        <div class="chart" id="Chart2"> </div>
-    </div> 
+                <div class="chart" id="WorldMap"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Governments worldwide working on a Central Bank Digital Currency</h3>
+                
+                <div class="chart" id="CBDCMap"></div>
+            </div>
+        </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 8 Starts Here -->
+        <article>
+            <h2>Week 8 - Festival of Economics</h2>
+            <p>During the Festival of Economics I attended the talk given by Tim Harford. <br>During Tim Harfords' talk he said "Elon Musk directly influenced the dogecoin Price"<br>
+                He also said that if you have invested any of your money into a dot com company in 1999 you would've lost it.<br>
+                All data used was gotten from Yahoo Finance
+            </p>
+                
+        </article>
+        
+     <!-- Leads to both charts being adjecent to eachother, each with their respective text divs -->
+        <container class="container">
+            <div id="text">
+                <h3>Dot com Bubble</h3>
+                <p>In 200 if you had invested any money into a dot com company by 2003 <br> you likely would've lost almost all of it 
+                </p>
+
+                <div class="chart" id="Week8Chart"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Dogecoin Price</h3>
+                <p> One of the many times Elon Musk tweeted was on Feb 4th and March 6th.<br>
+                The chart illustrates that within 2 weeks of both dates Dogecoin experienced sharp rises in price.
+                Suggesting he did have control over the Dogecoin price </p>
+                    
+                
+             <div class="chart" id="Week8Chart2"></div>
+            </div>
+        </container>
+    </section>
+
+
+
+
+    <section id="Week">
+      
+        <!-- Week 9 -->
+        <article>
+            <h2>Week 9 - Advanced Charts</h2>
+
+                
+        </article>
+        
+     
+        <container class="container1">
+            <div id="text">
+                <h3>Regression between the NASDAQ price and Bitcoin</h3>
+                <p>This Regression chart highlights no correlation between the NASDAQ and BTC price
+                </p>
+
+                <div class="chart" id="REGChart"></div>
+            </div>
+    
+            <div id="text">
+                <h3>Exploring if there is a relationship between GDP per Capita & Crypto Users</h3>
+                <p>It seems from the chart that there is no clear visual relationship  </p>
+                    
+                
+                <div class="chart" id="BubbleChart"></div>
+            </div>
+        </container>
+    </section>
+
+    <section id="Week">
+        <!-- Week !0 -->
+        <article>
+            <h2>Week 10 - Machine Learning</h2>
+        </article>
+
+        <container class="container1">
+            <div id="text">
+                <h3><a href = "https://colab.research.google.com/drive/1g4G52rjB-fJZBc2cm5J3uOOwHFTwCMlL#scrollTo=QZ4e47wWpBz5">Bitcoin & Dot Com Bubble</a></h3>
+                <p>My Hypothesis was: Bitcoin does not follow the price action of a bubble </p>
+                
+                <img src="cluster.png" height="400" width="500" style = "max-width: 90%;"> 
+                <p>Based on normalising both charts and using cosine similarity, one could make the argument that based on price trends
+                Bitcoin is a bubble, as it had a cosine similarity of 93%. This would prove my hypothesis to be incorrect.</p>
+            </div>
+        </container>
+    </section>
+
+    
+
+
 </body>
-
-
+<!-- Chart Embeds -->
 <script>
-    //Define charts:
+   
     var myChart1 = "ozonelayer.json";
     var myChart2 = "weather.json";
+    var IMFChart1 = "week2imf.json";
+    var IMFChart2 = "week2imfGDP.json";
+    var BondChart = 'week3.json';
+    var BondChart2 = 'week32.json';
+    var WoodChart = 'woodworkhits.json'
+    var ONS1 = 'ONS11.json'
+    var ONS2 = 'ONS12.json'
+    var ONS3 = 'ONS13.json'
+    var ONS4 = 'ONS14.json'
+    var ONS5 = 'ONS15.json'
+    var ONS6 = 'ONS16.json'
+    var ONS7 = 'ONS17.json'
+    var ONS8 = 'ONS18.json'
+    var ONS9 = 'ONS19.json'
+    var WorldMap = 'worldmap.json'
+    var CBDCMap = 'cbdcusers.json'
+    var Week8Chart = 'week8graph1.json'
+    var Week8Chart2 = 'week8graph2.json'
+    var REGChart = 'week9graphBTCNASDAQREG.json'
+    var BubbleChart = 'week9graph2.json'
+    
 
-    // Embed charts:
+
+    
     vegaEmbed('#Chart1', myChart1);
     vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#IMFChart1', IMFChart1);
+    vegaEmbed('#IMFChart2', IMFChart2);
+    vegaEmbed('#BondChart', BondChart);
+    vegaEmbed('#BondChart2', BondChart2);
+    vegaEmbed('#WoodChart', WoodChart);
+    vegaEmbed('#ONS1', ONS1);
+    vegaEmbed('#ONS2', ONS2);
+    vegaEmbed('#ONS3', ONS3);
+    vegaEmbed('#ONS4', ONS4);
+    vegaEmbed('#ONS5', ONS5);
+    vegaEmbed('#ONS6', ONS6);
+    vegaEmbed('#ONS7', ONS7);
+    vegaEmbed('#ONS8', ONS8);
+    vegaEmbed('#ONS9', ONS9);
+    vegaEmbed('#WorldMap', WorldMap);
+    vegaEmbed('#CBDCMap', CBDCMap);
+    vegaEmbed('#Week8Chart', Week8Chart);
+    vegaEmbed('#Week8Chart2', Week8Chart2);
+    vegaEmbed('#BubbleChart', BubbleChart);
+    vegaEmbed('#REGChart', REGChart);
+    
+   
 </script>
+    
 
 </html>
-
-
