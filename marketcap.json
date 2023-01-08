@@ -1,0 +1,54 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/Nomicsmarketcap.csv",
+      "format": {"type": "csv"}
+    },
+    "title": {
+      "text": "Market Cap of Top Cryptocurrencies",
+      "subtitle": "Source: Nomics.com",
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 10,
+      "anchor": "start",
+      "color": "black"
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "name",
+          "oneOf": [
+            "Bitcoin",
+            "Ethereum",
+            "XRP",
+            "Binance Coin",
+            "ADA",
+            "Cardano",
+            "Polygon",
+            "Dogecoin",
+            "OKB"
+          ]
+        }
+      }
+    ],
+    "config": {"background": "#ffffff"},
+    "height": 400,
+    "width": 400,
+    "mark": {
+      "type": "arc",
+      "innerRadius": 80,
+      "stroke": "#2e2f2f",
+      "tooltip": true
+    },
+    "encoding": {
+      "theta": {"field": "market_cap", "type": "quantitative","title":"Market Cap"},
+      
+      "color": {
+        "field": "name",
+        "title": "Cryptocurrency",
+        "type": "nominal",
+        "scale": {"scheme": "darkgreen"},
+        "sort": "ascending",
+        "legend": {"orient": "left", "fillColor": "#ffffff", "padding": 3}
+      }
+    }
+  }

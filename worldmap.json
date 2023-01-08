@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{
+        "text":"World Map",
+        "subtitle":"Source: GeoJson Generator",
+        "anchor":"start"
+
+    },
+    "width":400,
+    "height":300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/custom.geo%20(3).json",
+      "format":{"type":"json", "property": "features"}
+    },
+  
+    "transform": [
+      {
+        "lookup":"properties.name",
+        "from":{
+          "data":{
+            "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/Per22.csv"
+          },
+          "key": "Country",
+          "fields": ["Number"]
+        }
+      }
+    ],
+    "projection": {
+      "type":"mercator"
+    },
+    "mark":{
+      "type": "geoshape",
+      "fill":"seagreen",
+      "stroke":"black",
+      "strokeWidth":0.5
+    },
+  
+    "encoding": {
+      "tooltip":[
+        {"field":"properties.name", "type":"nominal", "title":"country"}
+      ]
+      
+    }
+  }

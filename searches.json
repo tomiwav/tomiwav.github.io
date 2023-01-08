@@ -1,0 +1,45 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+    "description": "Chart that uses repeated layers to make multiple calls to an API",
+
+
+    "title": {
+      "text": "Searches for: 'How To Invest In Crypto (Red)' & 'Best Crypto To Invest In' (Green)",
+      "subtitle":"Source: Google Trends",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"
+    },
+
+
+    "height":400,
+    "width":500,
+
+    
+    "encoding": {
+      "x": {"field": "Month", "type": "temporal", "title": null, "axis": {"grid": false}},
+      "y": {"field": "searches", "type": "quantitative", "title": "Indexed Number Of Searches", "axis": {"grid": false}},
+      "color":{ 
+        "legend":{
+          "title":"Search Terms",
+          "values":["How to invest in Cryptocurrency","Best crypto to invest in"],
+          "symbolType":"stroke",
+          "orient": "top-left"}}
+    },
+
+  "layer": [
+      
+      {"data": {"url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/best%20cryptocurrency%20to%20invest%20in.csv"},
+      "mark": {"type":"line", "color":"green"}
+      },
+
+     {"data": {"url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/how%20do%20I%20invest%20in%20crypto.csv"},
+      "mark": {"type":"line", "color":"orangered"}
+      }
+
+
+    ]
+}

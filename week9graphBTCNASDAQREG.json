@@ -1,0 +1,102 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Correlation in Stock Prices of Bitcoin on NASDAQ",
+    "subtitle": " Price at open (US$) in last 5 years, Source: Yahoo Finance",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/BTCNASDAQ.csv"
+  },
+  "height": 400,
+  "width": 400,
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "point": false,
+        "clip": true,
+        "color": "#94ddde"
+      },
+      "encoding": {
+        "x": {
+          "field": "Open",
+          "type": "quantitative",
+          "title": "NASDAQ (US$)",
+          "axis": {
+            "grid": false,
+            "domainColor": "#000000",
+            "labelColor": "#000000",
+            "tickColor": "#000000",
+            "gridColor": "black",
+            "titleColor": "#000000"
+          },
+          "scale": {"domain": [0, 20000]}
+        },
+        "y": {
+          "field": "BTC",
+          "type": "quantitative",
+          "title": "BTC (US$)",
+          "axis": {
+            "grid": false,
+            "domainColor": "#000000",
+            "labelColor": "#000000",
+            "tickColor": "#000000",
+            "gridColor": "black",
+            "titleColor": "#000000"
+          },
+          "scale": {"domain": [0, 55000]}
+        },
+        "tooltip": [
+          {
+            "field": "Open",
+            "type": "quantitative",
+            "title": "NASDAQ (US$)",
+            "format": ".2f"
+          },
+          {
+            "field": "BTC",
+            "type": "quantitative",
+            "title": "BTC(US$)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "#1b129a96", "strokeWidth": 5},
+      "transform": [{"regression": "BTC", "on": "Open"}],
+      "encoding": {
+        "x": {
+          "field": "Open",
+          "type": "quantitative",
+          "scale": {"domain": [0, 20000]}
+        },
+        "y": {
+          "field": "BTC",
+          "type": "quantitative",
+          "scale": {"domain": [0, 50000]}
+        }
+      }
+    },
+    {
+      "transform": [
+        {"regression": "BTC", "on": "Open", "params": true},
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#000000",
+        "x": "width",
+        "align": "right",
+        "y": 0
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+}

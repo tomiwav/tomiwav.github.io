@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+</head>
+
+<link rel="stylesheet" href="index2.css">
+
+<body>
+    <section id="header">
+        <article>
+          <h2> <span style="color: black">Does Cryptocurrency Have A Future?</h2>
+            <p><b>Data Science Project<br> Tomiwa Vaughan: 2027165</br></b></p>
+        </article>
+      </section>
+<!--navigation section-->
+    <nav>
+        <a class="active" href="index2.html">Portfolio</a>
+        <a href="project.html">Project</a>
+        <a href="https://github.com/tomiwav/tomiwav.github.io">Github</a>
+    </nav>
+    <section id="Week">
+        <article>
+            <h2><span style="color:black"></span>Aims</h2>
+            <p>The aim of my project is to investigate whether cryptocurrency/digital currency actually has a future within the world.<br>
+            With the popularity and awareness of cryptocurrency increasing worldwide, I wish to investigate whether evidence suggests that cryptocurrency actually has future within society.</p>
+            <h2><span style="color: black"></span>Data</h2>
+            <p>Within my project I have used a variety of data<br> I have scraped data from various websites such as; www.cbdctracker.com, www.tripleai.com. All the csv files which I used for my charts are also available in my Github.<br>
+            I have also used machine learning technique of cosine similarity within my project to investigate the similarity of bitcoin and the dot com bubble</p>
+            <h2><span style="color:black"></span>Challenges Faced</h2>
+            <p>One of the problems which I faced was I was unsure of how to scrape data from a table which had many pages in order to overcome this I copied the html of each page and input it into colab<br>
+            Then within colab I cleaned each table data individually and then used a function in colab which merged all of them into into one larger csv.<br>
+            Another problem which I faced was when doing creating the maps vega was not reading my data - in order to overcome this I went into the raw files within github and manually edited the data myself in order for it to match up with the GeoJson</p>
+        </article>
+    </section>
+    <section id="Week">
+      
+
+        <article>
+            <h2>Overview of CryptoCurrency</h2>
+            
+            
+        </article>
+    
+            
+            <container class="container1">
+
+                <div id="text">
+                    <h3>Cryptocurrency Users worldwide</h3>
+                
+              
+                <div class="chart" id="UserMap"></div>
+                </div>
+
+                <div id="text">
+                        <h3>GDP per capita vs crypto users</h3>
+
+
+                        <div class="chart" id="BubbleChart"> </div>
+            
+                </div>
+                
+                <p>From the map above is clear that cryptocurrency is still in it's growth stage however it is showing significant numbers of usage worldwide.<br>
+                   Within the increasing cryptocurrency ownership occuring worldwide - there is also no clear relationship between GDP per capita and crypto users suggesting that crypto as an asset is not exclusive to High GDP countries<br>
+                   Furthermore suggesting that cryptocurrency has a concrete future world wide & it is not asset which discriminates.
+
+                
+            </container>
+
+
+    </section>
+
+
+
+</section>
+
+
+<section id="Week">
+    <article>
+        <h2>Contextual Adjustment</h2>
+    </article>
+    <container class ="container">
+
+        <div id="text">
+        <h3>Cryptocurrency Market Cap</h3>
+        <div class="chart" id="MarketCap"></div>
+
+        </div>
+
+        <P>The Pie chart shows a breakdown of the top cryptocurrencies as seen - Bitcoin has the largest market cap by a significant amount.<br>
+            For this reason within my analysis - I will be using Bitcoin as a representative of cryptocurrency, this is because if I use the overall market cap it will do a disservice to cryptocurrency.<br>
+            This is because cryptocurrency is stained with alot of meme coins which obviously have no future contaminating the market cap and thus the overall analysis.
+        
+    </container>
+</section>
+
+
+
+    <section id="Week">
+        <article>
+            <h2>Cryptocurrency Adoption & Interest</h2>
+        </article>
+        <container class ="container1">
+
+            <div id="text">
+            <h3><a href="https://colab.research.google.com/drive/1W0jKtRarVAvu0gzNMO6hRS8OHZbX8wmT">Governments Working on a CBDC currently</a></h3>
+            <div class="chart" id="CBDCMap"></div>
+
+            </div>
+
+            <P>Link to my google colab where I scraped & cleaned the data is hyperlinked to the title.<br>From the map above apart from the countries whereby data is not available (represented as null). Can see that adoption of digital currency and crypto worlwide is being recieved well<br> 
+            CBDC adoption is one of the strongest indicators as to whether crypto has a future, because due to the power governments & institutions have on financial markets, crypto's future heavily relies on their acceptance of it as a legal asset/form of legal tender<br>
+            Thus the map showing the numerous amount of countries across the world working on making a central digital currency is positive for crypto & signposts crypto's long term potential<br>
+            
+        </container>
+    </section>
+
+    <section id="Week">
+        <article>
+            <h2>Trust & Security</h2>
+            <p>One of the major things which is inhibitting the growth of cryptocurrency is the lack of trust which users have in cryptocurrency<br>
+            Moreover due to the decentralised nature of crypto currency, you have less security of your funds and you are far more vulnerable to things such as fraud & hacking due to the lack of government oversight within the industry.<br>
+            Below are some charts showing the top 10 largest scams in 2020 & showing how searches doubting crypto moves with price.</p>
+        </article>
+        <container class ="container1">
+
+            <div id="text">
+                <h3><a href = "https://colab.research.google.com/drive/1C4_CUPbQkQYd7hvSJvRg__4TSdJv40wJ"> Top 10 Largest Crypto Scams/Hacks 2022</a></h3>
+                <div class="chart" id="CryptoScam"></div>
+
+            </div>
+
+            <div id="text">
+                <h3>Google Searches vs BTC Price</h3>
+                <div class="chart" id="BitcoinLine"></div>
+            </div>
+        </container>
+
+    </section>
+
+    <section id="Week">
+
+    <article>
+        <h2>Is it a Bubble</h2>
+        <p>The title of the graph is hyperlinked to my colab sheet<br>
+        One of the most common criticisms of crypto is it's a bubble & will eventually fade away out of trend. Using cosine similarity I discovered that it has a 92% similarity with the price action of the nasdaq bubble.</p>
+        
+    </article>
+    <container class = "container1">
+
+     <div id="text">
+        <h3><a href = "https://colab.research.google.com/drive/1g4G52rjB-fJZBc2cm5J3uOOwHFTwCMlL#scrollTo=QZ4e47wWpBz5">Similarity of Bitcoin & Dot Com Bubble</a></h3>
+        <img src="cluster.png" height="400" width="500">
+     </div>   
+    </container>
+    </section>
+    
+    <section id="Week">
+    <container class = "container1">
+    <article>
+        <h2>Conclusion</h2>
+        <p>From my research and charts, I have concluded that cryptocurrency does have a future. Despite the price action of the DotCom bubble being of high similarity to crypto. It is important to note that companies such as Amazon were a part of the DotCom bubble. Furthermore, the bubble popping, may actually serve crypto well.<br> 
+            As it may get rid of all the coins which do not have usecases or are scam coins, similarly to how the Dotcom bubble, exposed and exterminated inefficient companies. This would help the lack of trust into cryptocurrency. <br>
+            However, in order to further cement cryptocurrencies future, I believe it would need more regulation and oversight something which I think is on the horizon as a result of the FTX Scandal. A combination of these things and continuous government adoptions of digital currency & I think crypto currency has a bright future ahead.</p>
+    </article>
+    </container>
+    </section>
+
+</body>
+<script>
+    var UserMap = "cryptoowners.json"
+    var MarketCap = "marketcap.json"
+    var CBDCMap = "cbdcusers.json"
+    var SearchLine = "searches.json"
+    var BitcoinLine = "BitcoinPriceGoogle.json"
+    var CryptoScam = "cryptoscamchart.json"
+    var BubbleChart = "week9graph2.json" 
+
+
+
+
+
+    vegaEmbed('#UserMap', UserMap);
+    vegaEmbed('#MarketCap', MarketCap);
+    vegaEmbed('#CBDCMap', CBDCMap);
+    vegaEmbed('#SearchLine', SearchLine);
+    vegaEmbed('#BitcoinLine', BitcoinLine);
+    vegaEmbed('#CryptoScam', CryptoScam);
+    vegaEmbed('#BubbleChart', BubbleChart)
+</script>

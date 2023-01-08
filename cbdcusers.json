@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{
+      "text": "Governments working on launching a CBDC",
+      "subtitle": "Source: https://cbdctracker.org/",
+      "anchor": "start"
+    },
+    "width":400,
+    "height":400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/custom.geo%20(3).json",
+      "format":{"property": "features"}
+    },
+    "projection":{"type": "mercator"},
+  
+    "transform": [
+    {
+      "lookup":"properties.name",
+      "from":{
+        "key": "Country",
+        "fields": ["Status"],
+        "data":{
+          "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/cbdcfinal.csv",
+          "format":{"type":"csv"}
+        }
+      
+      }
+    }
+  ],
+  
+    "mark":{
+      "type": "geoshape",
+      "fill":"lightgray",
+      "stroke":"black",
+      "strokeWidth":0.6
+    },
+  
+    "encoding": {
+      "tooltip":[
+        {"field":"properties.name", "title":"Country"},
+        {"field":"Status","type":"nominal","title":"Status of Development"}
+      ],
+      "fill":{
+        "field":"Status",
+        "type":"nominal"
+      }
+    },
+       "config": {"mark": {"invalid": null}
+  }
+  
+  }

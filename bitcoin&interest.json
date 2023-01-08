@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Crpto & Interest Rates",
+    "title":"Line and Bar Chart Showing Bitcoin Price Movement in Line with US Interest Rates",
+    "subtitle":"Source: Yahoo Finance & FREDSTLOUIS",
+    "width": 600,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/BTC%26FED2.csv"
+    },
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "nominal",
+        "sort": ["0"],
+        "title": "Date",
+        "axis": {"labelAngle": 60, "labelFontSize":6}
+      }
+    },
+    "layer": [
+      {
+        "mark": {"opacity": 0.5, "type": "bar", "color": "#0f9c4e"},
+        "encoding": {
+          "y": {
+            "field": "High",
+            "type": "quantitative",
+            "scale": {"domain": [0, 51000]},
+            "title": "Bitcoin Price (£)",
+            "axis": {"titleColor": "#0f9c4e"}
+          },
+          "tooltip":[
+            {"field":"High","type":"nominal","title":"Monthly High"}
+          ]
+        }
+      },
+      {
+        "mark": {"stroke": "#000000", "type": "line", "interpolate": "monotone"},
+        "encoding": {
+          "y": {
+            "field": "FEDFUNDS",
+            "type": "quantitative",
+            "title": "US Interest Rate",
+            "axis": {"titleColor": "#000000"}
+          },
+          "tooltip":[
+            {"field":"FEDFUNDS","title":"Interest Rate"}
+          ]
+        }
+      }
+    ],
+    "resolve": {"scale": {"y": "independent"}}
+  }

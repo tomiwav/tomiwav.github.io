@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Crpto & Interest Rates",
+    "title":"Bitcoin Price($) and Google Searches for 'Is Cryptocurrency a scam' 2022",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/timelinesewy12.csv"
+    },
+    "encoding": {
+      "x": {
+        "field": "Week",
+        "type": "nominal",
+        "sort": ["0"],
+        "title": "Week",
+        "axis": {"labelAngle": 60, "labelFontSize":6}
+      }
+    },
+    "layer": [
+      {
+        "mark": {"opacity": 0.6, "type": "bar", "color": "#067c3b"},
+        "encoding": {
+          "y": {
+            "field": "High",
+            "type": "quantitative",
+            "scale": {"domain": [0, 60000]},
+            "title": "Bitcoin Price ($)",
+            "axis": {"titleColor": "#0f9c4e"}
+          },
+          "tooltip":[
+            {"field":"High","type":"nominal","title":"Monthly High"}
+          ]
+        }
+      },
+      {
+        "mark": {"stroke": "#000000", "type": "line", "interpolate": "monotone"},
+        "encoding": {
+          "y": {
+            "field": "Cryptoscam",
+            "type": "quantitative",
+            "title": "Indexed Amount of searches for 'Is crypto a scam'",
+            "axis": {"titleColor": "#000000"}
+          },
+          "tooltip":[
+            {"field":"Cryptoscam","title":"Index Amount"}
+          ]
+        }
+      }
+    ],
+    "resolve": {"scale": {"y": "independent"}}
+  }

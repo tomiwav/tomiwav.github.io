@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title":{
+      "text": "Crypto Ownership Worldwide (2022)",
+      "subtitle": "Source: www.triplea.io (2022)",
+      "anchor": "start"
+    },
+    "width":400,
+    "height":400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/custom.geo%20(3).json",
+      "format":{"property": "features"}
+    },
+    "projection":{"type": "mercator"},
+  
+    "transform": [
+    {
+      "lookup":"properties.name",
+      "from":{
+        "key": "Country",
+        "fields": ["Percentage of the population","Number of crypto owners"],
+        "data":{
+          "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/cryptoownersww22.csv",
+          "format":{"type":"csv"}
+        }
+      
+      }
+    }
+  ],
+  
+    "mark":{
+      "type": "geoshape",
+      "fill":"#10aa55",
+      "stroke":"black",
+      "strokeWidth":0.6
+    },
+  
+    "encoding": {
+      "tooltip":[
+        {"field":"properties.name", "title":"Country"},
+        {"field":"Number of crypto owners","type":"nominal","title":"Number of Crypto Owners"},
+        {"field":"Percentage of the population","type":"nominal","title":"% of Population"}
+      ]
+    },
+       "config": {"mark": {"invalid": null}
+  }
+  
+  }

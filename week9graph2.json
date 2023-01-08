@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "height": 400,
+    "width": 400,
+    "title": "Crypto Ownership vs GDP Per Capita",
+    "data": {
+      "url": "https://raw.githubusercontent.com/tomiwav/tomiwav.github.io/main/advchart.csv"
+    },
+    "mark": "circle",
+    "encoding": {
+      "y": {
+        "field": "Percentage",
+        "type": "quantitative",
+        "scale":{"domain":[0,0.25]},
+        "title":"Percenatage of Population who own crypto"
+      },
+      "x": {
+        "field": "GDP",
+        "type": "quantitative",
+        "title": "GDP per Capita"
+      },
+      "size": {
+        "field": "GDP",
+        "type": "nominal",
+        "legend": null
+      },
+      "color": {
+        "field": "GDP",
+        "type": "nominal"
+      },
+      "tooltip": [
+        {"field": "Country", "title": "Country"},
+        {"field": "GDP", "title": "GDP per Capita"},
+        {"field":"Number","title":"Number Of Crypto Owners"},
+        {"field":"Percentage","title":"Percentage (Multiply by 100)"}
+      ]
+    },
+    "config": {}
+  }
